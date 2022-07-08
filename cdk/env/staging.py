@@ -65,12 +65,6 @@ class Resource():
             bucket_name='ietty-elb-logs'
         )
 
-        self.alb_listerner = elb.ApplicationListener.from_application_listener_attributes(
-            stack, 'alb_listener',
-            listener_arn=
-
-        )
-
         self.cluster = ecs.Cluster.from_cluster_attributes(
             stack, 'staging-ecs',
             vpc=self.vpc,
